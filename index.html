@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title> </title>
+
+        <meta name="description" content=" "/>
+        <link rel="image_src" href="img/ .png" />
+
+        <link rel="stylesheet" type="text/css" href="css/normalize.css">   
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+        <style>
+
+
+            .tweet.tweet2.tweet3.tweet4 {
+                width: 102px;
+                height: 29px;
+                background-color: red;
+                display: none;
+            }
+
+            .hide {
+                display: none;
+            }
+
+        </style>
+
+    </head>
+
+
+    <body>
+
+
+
+        <div class="tweet hide">
+            
+            <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://tomgalle.com" data-via="tomgalle" data-size="large">Tweet</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, '
+                script', 'twitter-wjs');</script>
+        </div>
+
+
+        <div class="tweet2 hide">
+            
+            <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://tomgalle.com" data-via="tomgalle" data-size="large">Tweet</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        </div>
+
+
+        <div class="tweet3 hide">
+            
+            <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://tomgalle.com" data-via="tomgalle" data-size="large">Tweet</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        </div>
+
+
+        <div class="tweet4 hide">
+            
+            <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://tomgalle.com" data-via="tomgalle" data-size="large">Tweet</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        </div>
+ 
+
+
+
+
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script type="text/javascript" src="js/jquery.transit.min.js"></script>
+        <script type="text/javascript" src="js/jquery-ui.js"></script>
+        <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="js/script.js"></script>
+        <script>
+
+
+        init();
+
+        function init () {
+
+            var tweet = $('.tweet'),
+                tweet2 = $('.tweet2'),
+                tweet3 = $('.tweet3'),
+                tweet4 = $('.tweet4'),
+                tweet5 = $('.tweet5'),
+                pageHeight = $(window).height(),
+                endPosition = pageHeight - '29';
+
+            function tweetdrop() {
+                
+                var pageWith = $(window).width();
+                var randomPosition = Math.floor(Math.random() * pageWith );
+                tweet.css({
+                    // top: '0px',
+                    left: randomPosition,
+                    position: 'fixed'
+                });
+                // tweet.clone();
+                tweet.show();
+
+                tweet.transition({ y: endPosition }, 300, 'linear', function() {
+                    tweet.hide();
+                    tweet.transition({ y:'-50px'})
+                });
+                
+            };
+
+            function tweetdrop2 () {
+                
+                var pageWith = $(window).width();
+                var randomPosition = Math.floor(Math.random() * pageWith );
+                tweet2.css({
+                    // top: '0px',
+                    left: randomPosition,
+                    position: 'fixed'
+                });
+                // tweet.clone();
+                tweet2.show();
+
+                tweet2.transition({ y: endPosition }, 300, 'linear', function() {
+                    tweet2.hide();
+                    tweet2.transition({ y:'-50px'})
+                });
+                
+            };
+
+            function tweetdrop3 () {
+                
+                var pageWith = $(window).width();
+                var randomPosition = Math.floor(Math.random() * pageWith );
+                tweet3.css({
+                    // top: '0px',
+                    left: randomPosition,
+                    position: 'fixed'
+                });
+                // tweet.clone();
+                tweet3.show();
+
+                tweet3.transition({ y: endPosition }, 300, 'linear', function() {
+                    tweet3.hide();
+                    tweet3.transition({ y:'-50px'})
+                });
+                
+            };
+
+            function tweetdrop4 () {
+                
+                var pageWith = $(window).width();
+                var randomPosition = Math.floor(Math.random() * pageWith );
+                tweet4.css({
+                    // top: '0px',
+                    left: randomPosition,
+                    position: 'fixed'
+                });
+                // tweet.clone();
+                tweet4.show();
+
+                tweet4.transition({ y: endPosition }, 300, 'linear', function() {
+                    tweet4.hide();
+                    tweet4.transition({ y:'-50px'})
+                });
+                
+            };
+
+
+
+            setInterval(function(){
+                tweetdrop();
+                // tweetdrop2();
+            }, 1200);
+
+            setInterval(function(){
+                tweetdrop2();
+            }, 800);
+
+            setInterval(function(){
+                tweetdrop3();
+            }, 1000);
+
+            setInterval(function(){
+                tweetdrop4();
+            }, 1300);
+
+
+                
+
+
+            //     tweet.transition({ y: endPosition }, 300, 'linear', function() {
+            //         $('.tweet').effect( "bounce", { times: 2 }, 400 );
+            //         });
+            // }
+               
+     
+                
+
+        };
+
+
+        </script>
+
+
+
+    </body>
+</html>
+
+
+
+
+
